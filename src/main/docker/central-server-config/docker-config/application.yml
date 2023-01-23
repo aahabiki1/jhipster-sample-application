@@ -1,0 +1,16 @@
+# Common configuration shared between all applications
+configserver:
+  name: Docker JHipster Registry
+  status: Connected to the JHipster Registry running in Docker
+
+jhipster:
+  security:
+    authentication:
+      jwt:
+        # secret key which should be base64 encoded and changed in production
+        base64-secret: MGU1MmVjZWY1NjZiYWU1ZjFkNjI4YmUzZjg1MWQxMGRmMTI1OTI4MjU4NmUxY2E5ZGEzNDJkZDdiMjk5ZWYzMjUzODBmZDQ1OWRkZTY2ODRkZTE5MzNiZTAwZTgyNWI0OTQ4MTJkZTIzNjg5NTQ4ZDBjODIzN2Q2YTE2Y2E5OWM=
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:${jhipster.registry.password}@jhipster-registry:8761/eureka/
